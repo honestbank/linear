@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.5.7
+
+### Patch Changes
+
+- 387ff7f: chore(deps): update dependency patch versions
+- Updated dependencies [387ff7f]
+- Updated dependencies [19a8db2]
+  - @linear/sdk@1.11.0
+
 ## 1.5.6
 
 ### Patch Changes
