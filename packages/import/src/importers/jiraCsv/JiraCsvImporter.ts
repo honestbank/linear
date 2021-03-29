@@ -81,12 +81,13 @@ export class JiraCsvImporter implements Importer {
       const release = row.Release && row.Release.length > 0 ? `Release: ${row.Release}` : undefined;
       const assigneeId = row.Assignee && row.Assignee.length > 0 ? row.Assignee : undefined;
       const status = row.Status;
-
-      const labels = [type];
+      let labels = [type];
+      if (row["Labels"].length > 0) {
+        labels = labels.concat(row["Labels"].split(","));
+      }
       if (release) {
         labels.push(release);
       }
-
       importData.issues.push({
         title: row.Summary,
         description,
