@@ -5,5 +5,6 @@
 "@linear/codegen-sdk": patch
 "@linear/codegen-test": patch
 ---
-  
+
+
 chore(deps): update dependency patch versions
