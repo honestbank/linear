@@ -82,7 +82,7 @@ export class JiraCsvImporter implements Importer {
       const assigneeId = row.Assignee && row.Assignee.length > 0 ? row.Assignee : undefined;
       const status = row.Status;
       let labels = [type];
-      if (row["Labels"].length > 0) {
+      if (row["Labels"] && row["Labels"].length > 0) {
         labels = labels.concat(row["Labels"].split(","));
       }
       if (release) {
